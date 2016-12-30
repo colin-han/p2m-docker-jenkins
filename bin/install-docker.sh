@@ -1,5 +1,3 @@
-apt-get purge "lxc-docker*"
-apt-get purge "docker.io*"
 apt-get update
 apt-get install apt-transport-https ca-certificates gnupg2
 
@@ -12,5 +10,5 @@ echo 'deb https://apt.dockerproject.org/repo debian-jessie main' > /etc/apt/sour
 apt-get update
 apt-get install -y docker-engine
 
-curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -sL "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
